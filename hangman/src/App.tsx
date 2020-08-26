@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./App.css";
+import { GlobalStyle } from "./App.styles";
 import Header from "./components/header/Header.component";
 import Figure from "./components/figure/Figure.component";
 import WrongLetters from "./components/wrong-letters/WrongLetters.component";
@@ -55,6 +56,7 @@ const App = () => {
 
   return (
     <>
+      <GlobalStyle />
       <Header />
       <div className="game-container">
         <Figure wrongLetters={wrongLetters} />
