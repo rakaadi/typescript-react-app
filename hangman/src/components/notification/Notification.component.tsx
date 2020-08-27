@@ -1,11 +1,13 @@
 import React from "react";
 
+import { NotificationContainer } from "./Notification.styles";
+
 const Notification = ({ showNotification }: { showNotification: boolean }) => {
     return (
-        <div className={`notification-container ${showNotification ? "show" : ""}`} >
+        <NotificationContainer show={showNotification} >
             <p>You have already entered this letter</p>
-        </div>
-    )
+        </NotificationContainer>
+    );
 };
 
 export default Notification;

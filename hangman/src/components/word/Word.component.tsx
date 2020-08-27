@@ -1,5 +1,7 @@
 import React from "react";
 
+import { WordContainer, LetterContainer } from "./Word.styles";
+
 export type answerProps = {
     selectedWord: string,
     correctLetters: string[]
@@ -9,17 +11,17 @@ export type wordProps = answerProps & { wrongLetters: string[] };
 
 const Word: React.FC<answerProps> = ({ selectedWord, correctLetters }) => {
     return (
-        <div className="word">
+        <WordContainer>
             {
                 selectedWord.split("").map((letter, i) => {
                     return (
-                        <span className="letter" key={i}>
+                        <LetterContainer key={i}>
                             {correctLetters.includes(letter) ? letter : ""}
-                        </span>
+                        </LetterContainer>
                     );
                 })
             }
-        </div>
+        </WordContainer>
     );
 };
 

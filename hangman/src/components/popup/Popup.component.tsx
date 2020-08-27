@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { PopupContainer, ButtonPopup } from "./Popup.styles";
+import { PopupContainer, PopupContent, ButtonPopup } from "./Popup.styles";
 import { wordProps } from "../word/Word.component";
 
 import { checkWin } from "../../utils";
@@ -24,13 +24,13 @@ const Popup: React.FC<ownProps> = ({ correctLetters, wrongLetters, selectedWord,
     useEffect(() => setPlayable(playable));
 
     return (
-        <div className="popup-container" style={finalMessage !== "" ? { display: "flex" } : {}} >
-            <PopupContainer>
+        <PopupContainer style={finalMessage !== "" ? { display: "flex" } : {}}>
+            <PopupContent>
                 <h2>{finalMessage}</h2>
                 <h3>{revealWord}</h3>
                 <ButtonPopup onClick={playAgain}>Play Again</ButtonPopup>
-            </PopupContainer>
-        </div>
+            </PopupContent>
+        </PopupContainer>
     )
 };
 

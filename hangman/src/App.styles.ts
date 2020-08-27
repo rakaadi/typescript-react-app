@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -20,4 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     h1 {
         margin: 20px 0 0;
     }
+`;
+
+export const GameContainer = styled.div`
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
 `;

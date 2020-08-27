@@ -1,8 +1,10 @@
 import React from "react";
 
+import { WrongLettersContainer } from "./WrongLetters.styles";
+
 const WrongLetters = ({ wrongLetters }: { wrongLetters: string[] }) => {
     return (
-        <div className="wrong-letters-container">
+        <WrongLettersContainer>
             <div>
                 {wrongLetters.length && <p>Wrong</p>}
                 {
@@ -11,8 +13,8 @@ const WrongLetters = ({ wrongLetters }: { wrongLetters: string[] }) => {
                         .reduce((prev: any, curr: any) => prev === null ? [curr] : [prev, ", ", curr], null)
                 }
             </div>
-        </div>
-    )
+        </WrongLettersContainer>
+    );
 };
 
 export default WrongLetters;
